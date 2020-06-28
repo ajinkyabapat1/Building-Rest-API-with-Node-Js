@@ -7,14 +7,20 @@ route.get('/',(req,res,next)=>{
 
 })
 route.post('/',(req,res,next)=>{
+  const order={
+    name:req.body.name,
+    price:req.body.price
+  }
   res.status(201).json({
-    msg:'orders were posted '
+    msg:'orders were posted ',
+    orderCreated:order
   })
 
 })
 route.delete('/',(req,res,next)=>{
   res.status(200).json({
-    msg:'orders were deleted'
+    msg:'orders were deleted',
+
   })
 
 })

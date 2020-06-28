@@ -8,8 +8,13 @@ res.status(200).json({
 
 
 route.post('/',(req, res,next)=>{
+  const product={
+    name:req.body.name,
+    price:req.body.price
+  }
   res.status(200).json({
-    msg:"products url hits with post"
+    msg:"products url hits with post",
+    creadtedProduct:product
   })
   });
 
